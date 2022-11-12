@@ -1,12 +1,9 @@
-package org.firstinspires.ftc.teamcode.tata.Manual;
+package org.firstinspires.ftc.teamcode.whiteout.RobotDrivetrain;
 
 import com.qualcomm.robotcore.hardware.Gamepad;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
-import org.firstinspires.ftc.teamcode.tata.RobotDrivetrain.RobotDrivetrainHW;
-import org.firstinspires.ftc.teamcode.tata.RobotDrivetrain.RobotDrivetrainParams;
-
-public class ManualDriveDriver implements Runnable{
+public class RobotDriveTrainDriver implements Runnable{
     private RobotDrivetrainHW dtHW = new RobotDrivetrainHW();
     private RobotDrivetrainParams params = new RobotDrivetrainParams();
 
@@ -19,7 +16,7 @@ public class ManualDriveDriver implements Runnable{
     //Sleep time interval (milliseconds) for the position update thread
     private int sleepTime;
 
-    public ManualDriveDriver(HardwareMap ahwMap, int threadSleepDelay){
+    public RobotDriveTrainDriver(HardwareMap ahwMap, int threadSleepDelay){
         dtHW.init(ahwMap);
         sleepTime = threadSleepDelay;
     }
@@ -41,12 +38,7 @@ public class ManualDriveDriver implements Runnable{
     }
 
     public void checkGamePad(Gamepad gp) {
-        if ((gp.left_stick_y != 0) || (gp.left_stick_x != 0) || (gp.right_stick_x != 0)) {
-            leftY = gp.left_stick_y*-1;
-            leftX = gp.left_stick_x * 1;
-            rightZ = gp.right_stick_x * -1;
-            dtHW.moveHolonomic(leftX, leftY, rightZ);
-        } else if (gp.dpad_up) {
+        if  (gp.dpad_up) {
             //forward
             dtHW.moveHolonomic(0, motor_power * 1, 0);
         } else if (gp.dpad_down) {

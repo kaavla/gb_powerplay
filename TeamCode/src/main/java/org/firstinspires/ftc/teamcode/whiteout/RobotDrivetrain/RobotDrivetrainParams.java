@@ -1,6 +1,6 @@
-package org.firstinspires.ftc.teamcode.tata.Manual;
+package org.firstinspires.ftc.teamcode.whiteout.RobotDrivetrain;
 
-public class ManualDriveParams {
+public class RobotDrivetrainParams {
     public double powerLF;
     public double powerRF;
     public double powerLR;

@@ -1,10 +1,20 @@
-package org.firstinspires.ftc.teamcode.tata.Common;
+package org.firstinspires.ftc.teamcode.whiteout.Common;
 
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.HardwareMap;
 
 public class autonomousBase extends LinearOpMode {
 
+    public enum StartPos {
+        Warehouse, //White Colored Box
+        Storage    //Duck Side
+    }
+
+    public enum opModeCalled {
+        AUTO,
+        MANUAL
+    }
 
     @Override
     public void runOpMode() throws InterruptedException {
@@ -12,8 +22,9 @@ public class autonomousBase extends LinearOpMode {
     }
 
 
-//    public void init(HardwareMap hwMap, Pose2d startPose, opModeCalled op) {
-//        PoseStorage.startPose = startPose;
+    public void init(HardwareMap hwMap, opModeCalled op) {
+
+        //        PoseStorage.startPose = startPose;
 //        op_mode_called = op;
 //
 //        if (startPose.getY() < 0) {
@@ -74,7 +85,7 @@ public class autonomousBase extends LinearOpMode {
 //        driverThread1.start();
 
 
-  //  }
+      }
 
 
 
