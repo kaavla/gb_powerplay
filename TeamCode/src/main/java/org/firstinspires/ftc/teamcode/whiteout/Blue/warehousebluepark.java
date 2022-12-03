@@ -4,7 +4,7 @@ import com.acmerobotics.roadrunner.geometry.Pose2d;
 import com.acmerobotics.roadrunner.trajectory.Trajectory;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 
-import org.firstinspires.ftc.teamcode.drive.DriveConstants;
+import org.firstinspires.ftc.teamcode.whiteout.Red.drive.DriveConstants;
 import org.firstinspires.ftc.teamcode.whiteout.Common.tataAutonomousBase;
 import org.firstinspires.ftc.teamcode.whiteout.Common.tataMecanumDrive;
 
