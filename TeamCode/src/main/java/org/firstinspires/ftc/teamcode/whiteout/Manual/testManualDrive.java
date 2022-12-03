@@ -1,12 +1,15 @@
-package org.firstinspires.ftc.teamcode.whiteout.RobotDrivetrain;
+package org.firstinspires.ftc.teamcode.whiteout.Manual;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
+import org.firstinspires.ftc.teamcode.whiteout.RobotDrivetrain.RobotDriveTrainDriver;
+import org.firstinspires.ftc.teamcode.whiteout.RobotDrivetrain.RobotDrivetrainParams;
 
-@TeleOp(name = "testRobotDrivetrain", group = "Test - TATA")
+
+@TeleOp(name = "testRobotDrivetrain1", group = "Test - TATA")
 //@Disabled
-public class testRobotDrivetrain extends LinearOpMode {
+public class testManualDrive extends LinearOpMode {
     public RobotDriveTrainDriver dtDriver ;
     //public RobotDrivetrainHW dt = new RobotDrivetrainHW();
     //private float leftX, leftY, rightZ;
