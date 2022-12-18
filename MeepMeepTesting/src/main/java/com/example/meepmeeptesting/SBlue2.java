@@ -11,7 +11,7 @@ import com.noahbres.meepmeep.roadrunner.trajectorysequence.TrajectorySequence;
 import java.util.Arrays;
 
 //WareHouse Path
-public class ShankBlue2 implements MeepMeepPath{
+public class SBlue2 implements MeepMeepPath{
 
 	double wallPos = 63;
 	Pose2d dropPos =new Pose2d( -0.4,51.5 , Math.toRadians(67.5));

@@ -4,11 +4,12 @@ import com.acmerobotics.roadrunner.geometry.Pose2d;
 import com.noahbres.meepmeep.MeepMeep;
 import com.noahbres.meepmeep.core.colorscheme.scheme.ColorSchemeRedDark;
 import com.noahbres.meepmeep.roadrunner.DefaultBotBuilder;
+import com.noahbres.meepmeep.roadrunner.DriveTrainType;
 import com.noahbres.meepmeep.roadrunner.entity.RoadRunnerBotEntity;
 
 public class MeepMeepTesting {
-    static double robotLength = 18;
-    static double robotWidth = 11.5;
+    static double robotLength = 15.5;
+    static double robotWidth = 15;
 
     static final double tileSize = 23;
     static final double tileConnector = 0.75;
@@ -19,12 +20,15 @@ public class MeepMeepTesting {
 
     public static void main(String[] args) {
 
-        ShankBlue1 rt = new ShankBlue1();
+//        ShankBlue1 rt = new ShankBlue1();
+        F2Parking rt = new F2Parking();
         MeepMeep meepMeep = new MeepMeep(1000);
 
         RoadRunnerBotEntity myBot = new DefaultBotBuilder(meepMeep)
                 // Set bot constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
                 .setConstraints(60, 60, Math.toRadians(180), Math.toRadians(180), 15)
+                .setDriveTrainType(DriveTrainType.MECANUM)
+                .setDimensions(robotWidth, robotLength)
                 .followTrajectorySequence(drive -> {
                             return rt.getTrajectorySequence(drive);
 

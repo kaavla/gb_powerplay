@@ -4,7 +4,7 @@ import com.acmerobotics.roadrunner.geometry.Pose2d;
 import com.noahbres.meepmeep.roadrunner.DriveShim;
 import com.noahbres.meepmeep.roadrunner.trajectorysequence.TrajectorySequence;
 
-public class ShankBlue1 implements MeepMeepPath{
+public class SBlue1 implements MeepMeepPath{
 
 	double wallPos = 63;
 
