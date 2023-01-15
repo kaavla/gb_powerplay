@@ -1,10 +1,11 @@
-package com.example.meepmeeptesting;
+package com.example.meepmeeptesting.soniatest;
 
 import com.acmerobotics.roadrunner.geometry.Pose2d;
+import com.example.meepmeeptesting.MeepMeepPath;
 import com.noahbres.meepmeep.roadrunner.DriveShim;
 import com.noahbres.meepmeep.roadrunner.trajectorysequence.TrajectorySequence;
 
-public class A2Parking implements MeepMeepPath{
+public class A2ConePark implements MeepMeepPath {
 
     //blue start
     Pose2d A2StartPos =new Pose2d( -24 - (robotWidth/2),72 - (robotLength/2), Math.toRadians(270));
